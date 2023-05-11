@@ -28,3 +28,14 @@ Wed 10 May 2023 11:42:31 PM UTC:
  tests:  2|2
 total_score: 20/70
 b045813
+Thu 11 May 2023 12:00:39 AM UTC: 
+ heap.c | 25 +++++++++++++++++++++++--
+ 1 file changed, 23 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+test.c: In function ‘heap_push’:
+heap.c:37:22: error: ‘posicion’ is used uninitialized [-Werror=uninitialized]
+   37 |   int padre=(posicion-1)/2;
+      |             ~~~~~~~~~^~~
+cc1: all warnings being treated as errors
+Compilation failed
+3c2c15f
