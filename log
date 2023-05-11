@@ -50,3 +50,9 @@ heap.c:37:22: error: ‘posicion’ is used uninitialized [-Werror=uninitialized
 cc1: all warnings being treated as errors
 Compilation failed
 1b84f73
+Thu 11 May 2023 12:01:02 AM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  4|2
+total_score: 30/70
+cc9880e
