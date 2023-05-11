@@ -65,17 +65,19 @@ void heap_pop(Heap* pq){
   while(true){
     int hijo1=posicion*2+1;
     int hijo2=posicion*2+2;
+
+    if(hijo1>=pq->size || hijo2>=pq->size) return;
     
-    if((pq->heapArray[hijo1].priority > pq->heapArray[hijo2].priority) && (pq->heapArray[posicion].priority>pq->heapArray[hijo1].priority)){
+    if((pq->heapArray[hijo1].priority > pq->heapArray[hijo2].priority) && (pq->heapArray[posicion].priority<pq->heapArray[hijo1].priority)){
       heapElem aux=pq->heapArray[posicion];
       pq->heapArray[posicion]=pq->heapArray[hijo1];
       pq->heapArray[hijo1]=aux;
     }
     else{
-      if((pq->heapArray[hijo1].priority <= pq->heapArray[hijo2].priority) && (pq->heapArray[posicion].priority>=pq->heapArray[hijo2].priority)){
+      if((pq->heapArray[hijo1].priority <= pq->heapArray[hijo2].priority) && (pq->heapArray[posicion].priority<=pq->heapArray[hijo2].priority)){
         heapElem aux=pq->heapArray[posicion];
-        pq->heapArray[posicion]=pq->heapArray[hijo1];
-        pq->heapArray[hijo1]=aux;          
+        pq->heapArray[posicion]=pq->heapArray[hijo2];
+        pq->heapArray[hijo2]=aux;          
       }
       else{
         return;
