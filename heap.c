@@ -42,7 +42,7 @@ void heap_push(Heap* pq, void* data, int priority){
       heapElem aux=pq->heapArray[posicion];
       pq->heapArray[posicion]=pq->heapArray[padre];
       pq->heapArray[padre]=aux;
-      padre= (posicion-1)/2;
+      padre= (padre-1)/2;
       posicion = (posicion-1)/2;
     }
     else{

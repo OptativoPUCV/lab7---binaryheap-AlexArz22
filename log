@@ -39,3 +39,14 @@ heap.c:37:22: error: ‘posicion’ is used uninitialized [-Werror=uninitialized
 cc1: all warnings being treated as errors
 Compilation failed
 3c2c15f
+Thu 11 May 2023 12:00:49 AM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+test.c: In function ‘heap_push’:
+heap.c:37:22: error: ‘posicion’ is used uninitialized [-Werror=uninitialized]
+   37 |   int padre=(posicion-1)/2;
+      |             ~~~~~~~~~^~~
+cc1: all warnings being treated as errors
+Compilation failed
+1b84f73
